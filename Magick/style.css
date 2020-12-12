@@ -1,10 +1,10 @@
 .layer1{
     width: 300px;
-    height: 694;
+    height: 694px;
     left: 10px;
     padding: 10px; 
     position: absolute;
-    background-color: aquamarine;
+    background-color: whitesmoke;
 }
 .layer2 {
     width: 600px; 
@@ -12,24 +12,25 @@
     padding: 20px; 
     position: absolute;
     margin-left: 24.5%;
-    background: rgba(115, 255, 0, 0.849); 
+    background: blanchedalmond;
 
 }
 .layer3{
     width: 300px;
-    height: 694;
+    height: 694px;
     right: 10px;
     padding: 10px; 
     position: absolute;
-    background-color: aquamarine;
+    background-color: whitesmoke;
 }
 .labe4{
     padding: 20px;
-    width: 1300;
-    height: 1200;
+    width: 1300px;
+    height: 1200px;
     margin: auto;
     position: relative;
-    background-color: violet;
+    background-color: BlueViolet;
+
 }
 .centertext{
     margin-left: auto;
