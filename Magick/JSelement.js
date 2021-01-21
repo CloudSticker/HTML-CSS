@@ -1,24 +1,47 @@
 //document.querySelector("button").onclick = JSAnimationActive;
 //document.querySelector("button").onclick = JSGradient;
 //window.onload = JSGradient;
+// document.querySelector(".canvas").style.height = document.querySelector(".JSElement").height;
+// document.querySelector(".canvas").style.width = document.querySelector(".JSElement").width;
 
-function JSAnimationActive(){
-    console.log(document.querySelector("#password_01").value);
-    //style
-    document.querySelector("#JSElement").style.backgroundColor = document.querySelector("#password_01").value;
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext('2d');
+ctx.lineWidth = 2;
+var pos = 0;
+
+setInterval(function () 
+{
+
+    ctx.clearRect(0, 0, 900, 630);
+    ctx.fillRect(pos, pos, 10, 10);
+    
+    if (pos == 100){
+        k1 = false
+    }else if (pos == 0){
+        k1 = true;
+    }
+        
+
+    if (k1){
+        pos++;
+    }else{
+        pos--;
+    }
+    
+    console.log(document.getElementById("canvas").clientHeight);
+    console.log(document.getElementById("canvas").clientWidth);
 }
+, 20)
 
 
-//#E57ED7
-var r = 229;
-var g = 126;
-var b = 215;
 var i = 1;
 var k = true;
 
-function setFadeColor(i){
+
+
+function setFadeColor(i, element){
         var t =  "#" +  i.toString(16) + (255 - i).toString(16)  + (255).toString(16);
-        document.querySelector("#JSElement").style.backgroundColor = t; 
+        document.querySelector(element).style.backgroundColor = t; 
 }
 
 let timerId = setInterval( () => 
@@ -27,10 +50,7 @@ let timerId = setInterval( () =>
         
         //console.log("#" +  r.toString(16) + ' ' +  g.toString(16)  + ' ' + b.toString(16));
 
-        
-
-        
-        console.log(i);
+        //console.log(i);
 
         if (i == 256){
             k = false;
@@ -44,7 +64,8 @@ let timerId = setInterval( () =>
             i--;
         }
 
-        setFadeColor(i);   
+        setFadeColor(i, ".JSElement"); 
+        //setFadeColor(255 - i, ".canvas");  
     }
 }
  , 20);

@@ -10,11 +10,18 @@ html {
 	text-decoration: none;
 }
 
+#canvas{
+  width: 885px;
+  height: 615px;
+  border-radius: 40px;
+  /* background-color: black; */
+  border:10px solid black;
+}
 
-.JSelement {
+.JSElement {
     width: 900px;
     height: 630px;
-    background: #45A65F;
+    background-color: aqua;
 	border-radius: 40px;
 	
 }
