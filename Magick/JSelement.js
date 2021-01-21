@@ -7,35 +7,74 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 ctx.lineWidth = 2;
-var pos = 0;
+var posX = 10;
+var posY = 10;
+var i = 0;
+var n = 256;
+var k = true;
+var k3 = true;
+var k2 = true;
+ctx.fillStyle = "#ffff00";
+ctx.strokeStyle = "#ffff00";
+document.querySelector(".JSElement").style.backgroundColor = "#00FFFF"; 
 
 setInterval(function () 
 {
 
-    ctx.clearRect(0, 0, 900, 630);
-    ctx.fillRect(pos, pos, 10, 10);
+    ctx.clearRect(0, 0, 885, 615);
+
+    ctx.beginPath();
+    ctx.arc(posX, posY, 10, 0, 2 * Math.PI, false);    
+    ctx.fillStyle =  "#" +  n.toString(16) + (255 - n).toString(16)  + (255).toString(16);
+	ctx.strokeStyle =  "#" +  n.toString(16) + (255 - n).toString(16)  + (255).toString(16);
+    ctx.fill();
+	ctx.stroke();
+
+    if (n == 256){
+        k3 = false;
+    }else if (n == 0){
+        k3 = true;
+    }
+
+    if (k3){
+        n++;
+    }else{
+        n--;
+    }
     
-    if (pos == 100){
+    if (posX == 290){
         k1 = false
-    }else if (pos == 0){
+    }else if (posX == 10){
         k1 = true;
     }
         
 
     if (k1){
-        pos++;
+        posX++;
     }else{
-        pos--;
+        posX--;
     }
-    
-    console.log(document.getElementById("canvas").clientHeight);
-    console.log(document.getElementById("canvas").clientWidth);
+
+
+    if (posY == 140){
+        k2 = false
+    }else if (posY == 10){
+        k2 = true;
+    }
+        
+
+    if (k2){
+        posY++;
+    }else{
+        posY--;
+    }
+
+    // console.log(document.getElementById("canvas").clientHeight);
+    // console.log(document.getElementById("canvas").clientWidth);
 }
 , 20)
 
 
-var i = 1;
-var k = true;
 
 
 
@@ -43,6 +82,8 @@ function setFadeColor(i, element){
         var t =  "#" +  i.toString(16) + (255 - i).toString(16)  + (255).toString(16);
         document.querySelector(element).style.backgroundColor = t; 
 }
+
+
 
 let timerId = setInterval( () => 
 {
@@ -65,7 +106,7 @@ let timerId = setInterval( () =>
         }
 
         setFadeColor(i, ".JSElement"); 
-        //setFadeColor(255 - i, ".canvas");  
+        
     }
 }
  , 20);
