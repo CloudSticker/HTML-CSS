@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Russo+One&display=swap');
 html {
 	font-family: 'Roboto';
+
 }
 .nav-list li {
 	padding-right: 50px;
@@ -38,7 +39,7 @@ html {
     margin-right: auto;
     padding: 20px;
 	padding-top: 40px;
-	width: 1700;
+	width: 1700px;
     background-color: white;
 	display: flex;
 	Justify-content: space-between;
@@ -46,7 +47,7 @@ html {
 
 .CommentSelection{
     padding: 20px;
-	width: 1700;
+	width: 1700px;
 	margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -106,7 +107,14 @@ html {
 	right: 10;
 	bottom: 0;
 }
-
+/*header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), transparent);
+}*/
 .Comment{
     width: 350px;
     height: 200px;
@@ -122,16 +130,24 @@ li:hover {
 	color: aqua;
 }
 .header {
-	width: 100%;
-	
+    width: 100%;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), transparent);
 }
-.conteiner/* for garbage*/ { 
-	width: 1110px;
-	background: green;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	
+body{
+    margin: 0px;
+}
+
+
+.conteiner/* for garbage*/ {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+
 }
 .logo {
 	font-size: 30px;
@@ -141,7 +157,7 @@ li:hover {
 .btn {
 	background: gray;
 	padding: 10px;
-	border: 1px solid black;
+	border: 1px solid #000000;
 	border-radius: 36%;
 }
 .btn:hover {
