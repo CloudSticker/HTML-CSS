@@ -3,7 +3,7 @@
     --main-font: 'Source Sans Pro', sans-serif;
     --secondary-font: 'Herr Von Muellerhoff', cursive;
     --body-font: 'Cabin', sans-serif ;
-    --main-font-color-dark: #252525;
+    --main-font-color-dark: #474747;
     --secondary-font-color: #c59d5f;
     --body-font-color: #515151;
 }
@@ -19,15 +19,26 @@ body {
 ul {
     list-style: none;
 }
+.nav li a{
+    color: rgba(57, 57, 57, 0.8)
+}
+.nav li a:hover {
+    color: rgb(116, 98, 176);
+    transition-duration: 0.7s;
+}
 main{
     min-height: 100vh;
     background: linear-gradient(to right top, #6A6AAD, #26ADF3);
 
 }
 .otherspace{
+
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 10vw;
+    padding-left: 10vw;
 }
 header {
     height: 50px;
@@ -65,8 +76,53 @@ a {
 .mainwindow{
     background: white;
     min-height: 80vh;
-    width: 60%;
+    width: 100%;
     background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
     border-radius: 16px;
+    margin-bottom: 10vh;
+}
+.aboutwindow{
+    margin-top: 12vh;
+    margin-bottom: 10vh;
+    background: white;
+    min-height: 80vh;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
+    border-radius: 16px;
+}
+.secondwindow{
+    margin-top: 12vh;
+    margin-bottom: 10vh;
+    /*background: white;*/
+    min-height: 80vh;
+    width: 100%;
+    /*background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));*/
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.littlewindow1,
+.littlewindow2,
+.littlewindow3,
+.littlewindow4,
+.littlewindow5,
+.littlewindow6
+{
+    border-radius: 16px;
+    height: 33vh;
+    width: 33vw;
+    background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
+}
+.firstcolumn{
+    display: flex;
+}
+.secondcolumn{
+    margin-top: 12vh;
+    display: flex;
+}
+.littlewindow2,
+.littlewindow5 {
+    margin-left: 4vh;
+    margin-right: 4vh;
 }
 
