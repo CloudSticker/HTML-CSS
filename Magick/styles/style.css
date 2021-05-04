@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+@i
 :root{
     --main-font: 'Source Sans Pro', sans-serif;
     --secondary-font: 'Herr Von Muellerhoff', cursive;
@@ -169,25 +170,42 @@ a {
     font-color: #474747;
     outline-width: 0;
 }
-
-
-
-
-#selecttxt{
-
+footer {
+    justify-content: space-between;
+    display: flex;
+    left: 0;
+    background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
+    width: 100%;
 }
+footer a i {
+    color: black;
+    padding: 6px 6px;
+}
+
+footer a i:hover{
+    padding: 6px 6px;
+    color: black;
+    background: white;
+    border-radius: 35px;
+}
+
+footer div{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+
+.focus{
+    right: 0;
+    padding-right: 20px;
+}
+
+
+
+
 
 
 /* Не твоя теретория, не лезь, оно тебя сожрёт! */
-
-
-html {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #2d3436;
-}
 
 #btn {
     background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
@@ -207,36 +225,8 @@ html {
     padding-top: 5px;
 }
 
-#btn #circle {
-    width: 5px;
-    height: 5px;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    overflow: hidden;
-    transition: 500ms;
-}
-
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
 
 #btn:hover {
     color:  white;
-    background: black;
-}
-
-#btn:hover #circle {
-    height: 50px;
-    width: 250px;
-    left: 0;
-    border-radius: 0;
-    border-bottom: 2px solid #eee;
+    background: black; /* Меняй меняй, я ж хуету сделал*/
 }
