@@ -152,7 +152,7 @@ a {
     min-width: 100%;
     min-height: 10vh;
     max-height: 10vh;
-    margin-top: auto;
+    margin-top: 10vh;
     margin-bottom: auto;
     background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
 }
@@ -162,9 +162,18 @@ a {
     display: flex;
 }
 .emailbox{
-
+    background: transparent;
+    border-color: transparent;
     min-width: 75vh;
     font-size: 60px;
+    outline-width: 0;
+}
+
+
+
+
+#selecttxt{
+
 }
 
 
