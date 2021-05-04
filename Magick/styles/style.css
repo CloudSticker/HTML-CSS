@@ -146,6 +146,8 @@ a {
     justify-content: center;
 }
 .contactusd{
+
+    flex-direction: column;
     border-radius: 16px;
     min-width: 100%;
     min-height: 10vh;
@@ -159,9 +161,12 @@ a {
     min-width: 100%;
     display: flex;
 }
-.sendbtn{
+.emailbox{
 
+    min-width: 75vh;
+    font-size: 60px;
 }
+
 
 /* Не твоя теретория, не лезь, оно тебя сожрёт! */
 
@@ -181,7 +186,6 @@ html {
     color: #eee;
     font-size: 30px;
     font-family: 'Cookie', cursive;
-    position: relative;
     transition: 1s;
     -webkit-tap-highlight-color: transparent;
     display: flex;
@@ -196,7 +200,6 @@ html {
     height: 5px;
     background: transparent;
     border-radius: 50%;
-    position: absolute;
     top: 0;
     left: 50%;
     overflow: hidden;
