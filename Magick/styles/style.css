@@ -208,8 +208,9 @@ a {
     justify-content: center;
 }
 .contactusd{
-
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /*flex-direction: column;*/
     border-radius: 16px;
     min-width: 100%;
     min-height: 10vh;
@@ -224,9 +225,11 @@ a {
     display: flex;
 }
 .emailbox{
+    margin-left: 3vh;
+    margin-right: 20vh;
     background: transparent;
     border-color: transparent;
-    min-width: 75vh;
+    max-width:  80vh;
     font-size: 60px;
     font-color: #474747;
     outline-width: 0;
@@ -270,8 +273,8 @@ footer div{
 
 #btn {
     background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
-    height: 50px;
-    max-width: 250px;
+    height: 75px;
+    width: 300px;
     border: none;
     border-radius: 10px;
     color:  #474747;
@@ -283,7 +286,6 @@ footer div{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding-top: 5px;
 }
 
 
