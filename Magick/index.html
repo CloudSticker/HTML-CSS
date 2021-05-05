@@ -26,15 +26,38 @@
         </header>
     <section>
         <img src="img/stars.png" id="stars">
-        <img src="img/portal.png" id="portal">
+        <img src="img/portal2.png" id="portal">
         <img src="img/rinkandjerry.png" id="rick">
         <h2 id="text">Toxic Code</h2>
+        <a href="#mainwindow" id="expl">Узнать больше</a>
+        <img src="img/mountains_behind.png" id="mountains">
     </section>
+    <div class="mainwindow" id="mainwindow">
+        <h2>Some information here</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
 
-    <div class="otherspace">
-    <section class="mainwindow">
+        <script>
+            let portal = document.getElementById('portal');
+            let stars = document.getElementById('stars');
+            let rick = document.getElementById('rick');
+            let text = document.getElementById('text');
+            let expl = document.getElementById('expl');
+            let mountains = document.getElementById('mountains');
+            let header = document.querySelector('header');
 
-    </section>
+            window.addEventListener('scroll', function (){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                portal.style.top = value * 1.05 + 'px';
+                mountains.style.top = value * 0.5 + 'px';
+                rick.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1 + 'px';
+                expl.style.marginTop = value * 1 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
 
         <section class="aboutwindowbase" id="aboutus">
             <div class="aboutwindow">
@@ -43,27 +66,25 @@
             </div>
         </section>
 
-        <section class="secondwindowbase">
-        <div class="secondwindow" id="secondwindow">
-            <div class="firstcolumn">
-            <div class="littlewindow1">
-            </div>
-            <div class="littlewindow2">
-            </div>
-            <div class="littlewindow3">
-            </div>
-            </div>
-            <div class="secondcolumn">
-            <div class="littlewindow4">
-            </div>
-            <div class="littlewindow5">
-            </div>
-            <div class="littlewindow6">
+<!--        <section class="secondwindowbase">-->
+<!--        <div class="secondwindow" id="secondwindow">-->
+<!--            <div class="firstcolumn">-->
+<!--            <div class="littlewindow1">-->
+<!--            </div>-->
+<!--            <div class="littlewindow2">-->
+<!--            </div>-->
+<!--            <div class="littlewindow3">-->
+<!--            </div>-->
+<!--            </div>-->
+<!--            <div class="secondcolumn">-->
+<!--            <div class="littlewindow4">-->
+<!--            </div>-->
+<!--            <div class="littlewindow5">-->
+<!--            </div>-->
+<!--            <div class="littlewindow6">-->
 
-            </div>
-            </div>
-        </div>
-        </section>
+<!--            </div>-->
+<!--            </div>-->
 
         <section class="contactus">
             <div class="contactusd">

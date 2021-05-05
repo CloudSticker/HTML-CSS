@@ -37,6 +37,11 @@ header ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(225, 225, 225, 0.50);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
 }
 header ul li
 {
@@ -48,12 +53,18 @@ header ul li a{
     padding: 6px 15px;
     color: rgba(57, 57, 57, 0.8);
     border-radius: 20px;
+    background: rgba(225, 225, 225, 0.35);
 }
 header ul li a:hover, .active
 {
     background: #fff;
     color: rgb(116, 98, 176);
     transition-duration: 0.7s;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to right top, #6A6AAD, #26ADF3);
 }
 section{
     position: relative;
@@ -63,6 +74,17 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+section::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #6A6AAD, transparent );
+    z-index: 1000;
 }
 section img {
     position: absolute;
@@ -71,11 +93,10 @@ section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 section img#portal {
     mix-blend-mode: screen;
-    height: 100px;
-    width: 100px;
 }
 #text
 {
@@ -84,15 +105,37 @@ position: absolute;
     white-space: nowrap;
     font-size: 7.5vw;
     z-index: 9;
+
 }
 #rick {
     z-index: 10;
 }
-main{
-    min-height: 100vh;
-    background: linear-gradient(to right top, #6A6AAD, #26ADF3);
-
+#expl{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
 }
+.mainwindow{
+    position: relative;
+    padding: 100px;
+    background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
+}
+.mainwindow h2
+{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.mainwindow p{
+    font-size: 1.2em;
+    color: white;
+}
+
 .otherspace{
 
     flex-direction: column;
@@ -102,50 +145,11 @@ main{
     padding-right: 10vw;
     padding-left: 10vw;
 }
-header {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.container{
-    padding-right: 10vw;
-    padding-left: 10vw;
-}
-.logo {
-
-}
-.nav{
-    display: flex;
-    margin-left: auto;
-}
-.nav li {
-    padding-right: 100px;
-}
-.nav a {
-    color: black;
-    text-decoration: none;
-}
-.nav-list {
-    display: flex;
-    align-items: center;
-
-}
 .lastli{
     padding-right: 0px;
 }
-a {
-    text-decoration: none;
-}
-.mainwindow{
-    background: white;
-    min-height: 80vh;
-    width: 100%;
-    background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
-    border-radius: 16px;
-    margin-bottom: 10vh;
-}
+
+
 .aboutwindowbase{
     min-height: 100%;
     min-width: 100%;
