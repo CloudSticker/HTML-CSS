@@ -7,6 +7,11 @@
     --main-font-color-dark: #474747;
     --secondary-font-color: #c59d5f;
     --body-font-color: #515151;
+}*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html{
     font-family: var(--body-font);
@@ -14,18 +19,75 @@ html{
     color: var(--body-font-color);
     scroll-behavior: smooth;
 }
-body {
-    margin: 0px;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
 }
-ul {
+header .logo {
+
+}
+header ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
     list-style: none;
+    margin-left: 20px;
 }
-.nav li a{
-    color: rgba(57, 57, 57, 0.8)
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: rgba(57, 57, 57, 0.8);
+    border-radius: 20px;
 }
-.nav li a:hover {
+header ul li a:hover, .active
+{
+    background: #fff;
     color: rgb(116, 98, 176);
     transition-duration: 0.7s;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section img#portal {
+    mix-blend-mode: screen;
+    height: 100px;
+    width: 100px;
+}
+#text
+{
+position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+#rick {
+    z-index: 10;
 }
 main{
     min-height: 100vh;
