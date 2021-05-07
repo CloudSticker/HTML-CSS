@@ -193,6 +193,7 @@ position: absolute;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+
 }
 .secondwindow .examples .card:hover .box{
     transform: translateY(-50px);
@@ -371,4 +372,36 @@ footer a i:hover{
 .contactus .backg .emailform #btn:hover {
     color:  white;
     background: black; /* Меняй меняй, я ж хуету сделал*/
+}
+
+/* Я вижу шо ты сюда лезешь, не лезь тут шаманские танцы с бубном, оно тебе не надо */
+#myModal {
+    width: 1000px; height: 700px;
+    margin: auto;
+    padding: 18px 9px;
+    border-radius: 4px;
+    background: #fafafa;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: none;
+    opacity: 0;
+    z-index: 38;
+    text-align: center;
+}
+#myModal #myModal__close {
+    width: 21px; height: 21px;
+    position: absolute;
+    top: 1px; right: 11px;
+    cursor: pointer;
+    display: block;
+    font-size: 29px;
+}
+#myOverlay {
+    z-index: 37;
+    position: fixed;
+    background-color: rgba(0,0,0,.7);
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    cursor :pointer;
+    display :none;
 }
