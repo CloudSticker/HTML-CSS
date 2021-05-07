@@ -26,6 +26,7 @@ $(document).ready(function() {
     $('#win1').click( function(event){
         event.preventDefault();
         $('#overlay1').fadeIn(297, function(){
+            document.body.style.overflow = 'hidden';
             $('#opwin1')
                 .css('display', 'block')
                 .animate({opacity: 1}, 198);
@@ -37,12 +38,14 @@ $(document).ready(function() {
             function(){
                 $(this).css('display', 'none');
                 $('#overlay1').fadeOut(297);
+                document.body.style.overflow = 'auto';
             });
     });
 
     $('#win2').click( function(event){
         event.preventDefault();
         $('#overlay2').fadeIn(297, function(){
+            document.body.style.overflow = 'hidden';
             $('#opwin2')
                 .css('display', 'block')
                 .animate({opacity: 1}, 198);
@@ -54,12 +57,14 @@ $(document).ready(function() {
             function(){
                 $(this).css('display', 'none');
                 $('#overlay2').fadeOut(297);
+                document.body.style.overflow = 'auto';
             });
     });
 
     $('#win3').click( function(event){
         event.preventDefault();
         $('#overlay3').fadeIn(297, function(){
+            document.body.style.overflow = 'hidden';
             $('#opwin3')
                 .css('display', 'block')
                 .animate({opacity: 1}, 198);
@@ -71,6 +76,7 @@ $(document).ready(function() {
             function(){
                 $(this).css('display', 'none');
                 $('#overlay3').fadeOut(297);
+                document.body.style.overflow = 'auto';
             });
     });
 });
