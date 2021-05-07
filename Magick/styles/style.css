@@ -268,6 +268,10 @@ position: absolute;
     z-index: 1;
     transition: 0.5s;
     pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 .secondwindow .examples .card:hover .box .content p,
 .secondwindow .examples .card:hover .box .content h3{
@@ -306,33 +310,81 @@ position: absolute;
     height: 100%;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     padding: 100px;
+
+}
+.contactus::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    right: 0;
+    background: linear-gradient(to top, #8a57d7, transparent );
+    z-index: 1000;
+
 }
 .contactus .backg{
     position: relative;
-    height: 100%;
-    padding: 40px 0;
+    /*height: 100%;*/
+    width: 100%;
+    padding: 100px;
     background: linear-gradient(to right bottom, rgba(225,225,225,0.1), transparent);
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     border-top: 1px solid rgba(225,225,225,0.1);
     border-bottom: 1px solid rgba(225,225,225,0.1);
     border-radius: 25px;
-    z-index: 1;
+    z-index: 100;
+    height: 100%;
+    max-height: 600px;
 }
-.contactus .backg .emailform{
+.contactus .backg h2{
+    right: 0px;
+    font-size: 6em;
+    color: white;
+    margin-bottom: 10px;
+}
+.contactus .backg p{
+    font-size: 1.8em;
+
+    color: rgba(0,0,0, 0.1);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contactus .backg form{
     display: flex;
-    align-items: center;
-    border-radius: 16px;
-    background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
+    justify-content: center;
 }
-.contactus .backg .emailform .emailbox{
-    background: transparent;
-    border-color: transparent;
-    max-width:  80vh;
-    font-size: 60px;
-    font-color: #474747;
-    outline-width: 0;
+.contactus .backg form input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.contactus .backg form input[type="email"]{
+    background: #fff;
+    width: 600px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 15px 0 0 15px;
+    background: rgba(225, 225, 225,0.3);
+}
+.contactus .backg form input[type="submit"]{
+    position: relative;
+    border-radius: 0 15px 15px 0;
+    height: 50px;
+    width: 200px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgba(225, 225, 225,0.7);
+    transition: .3s;
+}
+.contactus .backg form input[type="submit"]:hover{
+    background: rgba(255, 255, 255, 0.64);
 }
 footer {
     position: relative;
@@ -348,7 +400,7 @@ footer {
 footer .contain{
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-gap: 20px;
 }
 footer .contain .sec h2{
@@ -366,7 +418,7 @@ footer .contain .sec p{
 .sci{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 50px);
+    grid-template-columns: repeat(6, 50px);
     grid-gap: 10px;
 }
 .sci li{
@@ -417,28 +469,6 @@ footer .contain .sec p{
 
 /* Не твоя теретория, не лезь, оно тебя сожрёт! */
 
-.contactus .backg .emailform #btn {
-    background: linear-gradient(to right bottom, rgba(225, 225, 225,0.7), rgba(225, 225, 225,0.3));
-    height: 75px;
-    width: 300px;
-    border: none;
-    border-radius: 10px;
-    color:  #474747;
-    font-size: 40px;
-    position: relative;
-    transition: 1s;
-    -webkit-tap-highlight-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-
-.contactus .backg .emailform #btn:hover {
-    color:  white;
-    background: black; /* Меняй меняй, я ж хуету сделал*/
-}
 
 /* Я вижу шо ты сюда лезешь, не лезь тут шаманские танцы с бубном, оно тебе не надо */
 .myModal {
