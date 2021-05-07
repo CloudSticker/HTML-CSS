@@ -23,20 +23,54 @@ window.addEventListener('scroll', function (){
 
 
 $(document).ready(function() {
-    $('a.myLinkModal').click( function(event){
+    $('#win1').click( function(event){
         event.preventDefault();
-        $('#myOverlay').fadeIn(297, function(){
-            $('#myModal')
+        $('#overlay1').fadeIn(297, function(){
+            $('#opwin1')
                 .css('display', 'block')
                 .animate({opacity: 1}, 198);
         });
     });
 
-    $('#myModal__close, #myOverlay').click( function(){
-        $('#myModal').animate({opacity: 0}, 198,
+    $('#modalClose1, #overlay1').click( function(){
+        $('#opwin1').animate({opacity: 0}, 198,
             function(){
                 $(this).css('display', 'none');
-                $('#myOverlay').fadeOut(297);
+                $('#overlay1').fadeOut(297);
+            });
+    });
+
+    $('#win2').click( function(event){
+        event.preventDefault();
+        $('#overlay2').fadeIn(297, function(){
+            $('#opwin2')
+                .css('display', 'block')
+                .animate({opacity: 1}, 198);
+        });
+    });
+
+    $('#modalClose2, #overlay2').click( function(){
+        $('#opwin2').animate({opacity: 0}, 198,
+            function(){
+                $(this).css('display', 'none');
+                $('#overlay2').fadeOut(297);
+            });
+    });
+
+    $('#win3').click( function(event){
+        event.preventDefault();
+        $('#overlay3').fadeIn(297, function(){
+            $('#opwin3')
+                .css('display', 'block')
+                .animate({opacity: 1}, 198);
+        });
+    });
+
+    $('#modalClose3, #overlay3').click( function(){
+        $('#opwin3').animate({opacity: 0}, 198,
+            function(){
+                $(this).css('display', 'none');
+                $('#overlay3').fadeOut(297);
             });
     });
 });

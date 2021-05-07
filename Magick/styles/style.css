@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10000;
+    z-index: 2;
 }
 header .logo {
 
@@ -75,6 +75,7 @@ section{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 1;
 }
 section::before
 {
@@ -84,7 +85,7 @@ section::before
     width: 100%;
     height: 100px;
     background: linear-gradient(to top, #6A6AAD, transparent );
-    z-index: 1000;
+    z-index: 6;
 }
 section img {
     position: absolute;
@@ -104,11 +105,11 @@ position: absolute;
     color: #fff;
     white-space: nowrap;
     font-size: 7.5vw;
-    z-index: 9;
+    z-index: 5;
 
 }
 #rick {
-    z-index: 10;
+    z-index: 4;
 }
 #expl{
     text-decoration: none;
@@ -193,11 +194,7 @@ position: absolute;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-<<<<<<< HEAD
-
-=======
     z-index: 4;
->>>>>>> main
 }
 .secondwindow .examples .card:hover .box{
     transform: translateY(-50px);
@@ -278,7 +275,7 @@ position: absolute;
     border-top: 1px solid rgba(225,225,225,0.1);
     border-bottom: 1px solid rgba(225,225,225,0.1);
     border-radius: 25px;
-    z-index: 100;
+    z-index: 1;
 }
 .contactus .backg .emailform{
     display: flex;
@@ -401,7 +398,7 @@ footer .contain .sec p{
 }
 
 /* Я вижу шо ты сюда лезешь, не лезь тут шаманские танцы с бубном, оно тебе не надо */
-#myModal {
+.myModal {
     width: 1000px; height: 700px;
     margin: auto;
     padding: 18px 9px;
@@ -413,8 +410,9 @@ footer .contain .sec p{
     opacity: 0;
     z-index: 38;
     text-align: center;
+    padding: 100px;
 }
-#myModal #myModal__close {
+.myModal .myModal__close {
     width: 21px; height: 21px;
     position: absolute;
     top: 1px; right: 11px;
@@ -422,7 +420,7 @@ footer .contain .sec p{
     display: block;
     font-size: 29px;
 }
-#myOverlay {
+.myOverlay {
     z-index: 37;
     position: fixed;
     background-color: rgba(0,0,0,.7);
