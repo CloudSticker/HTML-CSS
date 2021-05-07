@@ -9,6 +9,21 @@ let expl = document.getElementById('expl');
 let mountains = document.getElementById('mountains');
 let header = document.querySelector('header');
 
+
+
+const navSlide = () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-links");
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+    });
+}
+
+navSlide();
+    
+
+
 window.addEventListener('scroll', function (){
     let value = window.scrollY;
     stars.style.left = value * 0.25 + 'px';
